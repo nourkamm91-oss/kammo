@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///C:/Users/Utilisateur/Downloads/gemini-code-1785184625576.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOCTURNE | Official Movie Site (18+)</title>
+  <!-- Google Fonts for High-End Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./NOCTURNE _ Official Movie Site (18+)_files/css2" rel="stylesheet">
+  
+  <style>
+    /* RESET & CORE STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #08080a;
+      color: #e0e0e0;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .brand {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* AGE GATE MODAL */
+    #age-gate {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 5, 5, 0.96);
+      backdrop-filter: blur(12px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .age-box {
+      max-width: 480px;
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #0d0d11;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      border-radius: 4px;
+    }
+    .badge-18 {
+      display: inline-block;
+      border: 2px solid #e50914;
+      color: #e50914;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+    .age-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .age-box p {
+      color: #aaa;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    /* BUTTONS */
+    .btn {
+      padding: 12px 28px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+    .btn-primary {
+      background-color: #e50914;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background-color: #b20710;
+      box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .btn-outline:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* NAVBAR */
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 30px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    nav a {
+      margin-left: 30px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #fff; }
+
+    /* HERO SECTION WITH YOUR CUSTOM IMAGE */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0 5%;
+      background: linear-gradient(to right, rgba(8,8,10,0.95) 25%, rgba(8,8,10,0.5) 60%, rgba(8,8,10,0.85)), 
+                  url('https://i.postimg.cc/NFW06N1r/e298be608649937bf0ca3ff670cf4feb.jpg') center/cover no-repeat;
+    }
+    .hero-content {
+      max-width: 650px;
+      margin-top: 60px;
+    }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    .hero-title {
+      font-size: 3.8rem;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: #ddd;
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+    .hero-synopsis {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #aaa;
+      margin-bottom: 35px;
+    }
+
+    /* SECTIONS COMMON */
+    section {
+      padding: 100px 5%;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: #e50914;
+      margin: 15px auto 0;
+    }
+
+    /* CAST GRID */
+    .cast-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+    .cast-card {
+      background: #0f0f15;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s;
+    }
+    .cast-card:hover { transform: translateY(-8px); }
+    .cast-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .cast-info {
+      padding: 20px;
+    }
+    .cast-name {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .cast-role {
+      color: #888;
+      font-size: 0.85rem;
+      margin-top: 5px;
+    }
+
+    /* REVIEWS / LAURELS */
+    .reviews {
+      background: #050507;
+      text-align: center;
+    }
+    .quote-box {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .quote {
+      font-size: 1.5rem;
+      font-family: 'Cinzel', serif;
+      color: #fff;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .critic {
+      color: #e50914;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 40px 5%;
+      text-align: center;
+      color: #666;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body style="overflow: auto;">
+
+  <!-- AGE VERIFICATION GATE -->
+  <div id="age-gate" style="display: none;">
+    <div class="age-box">
+      <span class="badge-18">AGE RESTRICTED 18+</span>
+      <h2>Adults Only</h2>
+      <p>This film contains mature themes, graphic violence, and adult content. Please confirm your age to proceed.</p>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="enterSite()">I am 18 or older</button>
+        <button class="btn btn-outline" onclick="exitSite()">Exit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="logo">FILM TITLE</div>
+    <nav>
+      <a href="file:///C:/Users/Utilisateur/Downloads/gemini-code-1785184625576.html#about">About</a>
+      <a href="file:///C:/Users/Utilisateur/Downloads/gemini-code-1785184625576.html#cast">Cast</a>
+      <a href="file:///C:/Users/Utilisateur/Downloads/gemini-code-1785184625576.html#watch">Watch</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-meta">
+          <span class="badge-18">R-RATED / 18+</span>
+          <span>2h 14m</span>
+          <span>Psychological Thriller</span>
+        </div>
+        <h1 class="hero-title">NOCTURNE</h1>
+        <p class="hero-tagline">"Some secrets demand to be kept in the dark."</p>
+        <p class="hero-synopsis">
+          In a city driven by vice and unspoken agreements, an uncompromising detective unravels a high-stakes conspiracy that leads directly into the upper echelons of power.
+        </p>
+        <div class="btn-group" style="justify-content: flex-start;">
+          <a href="file:///C:/Users/Utilisateur/Downloads/gemini-code-1785184625576.html#watch" class="btn btn-primary">Watch Trailer</a>
+          <a href="file:///C:/Users/Utilisateur/Downloads/gemini-code-1785184625576.html#about" class="btn btn-outline">Explore Details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAST SECTION -->
+    <section id="cast">
+      <h2 class="section-title">Principal Cast</h2>
+      <div class="cast-grid">
+        <div class="cast-card">
+          <img class="cast-img" src="./NOCTURNE _ Official Movie Site (18+)_files/photo-1534528741775-53994a69daeb" alt="Lead Actor">
+          <div class="cast-info">
+            <div class="cast-name">Elena Rostova</div>
+            <div class="cast-role">as Detective Vance</div>
+          </div>
+        </div>
+        <div class="cast-card">
+          <img class="cast-img" src="./NOCTURNE _ Official Movie Site (18+)_files/photo-1507003211169-0a1dd7228f2d" alt="Co-Star">
+          <div class="cast-info">
+            <div class="cast-name">Marcus Vance</div>
+            <div class="cast-role">as The Benefactor</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRITIC REVIEWS SECTION -->
+    <section class="reviews">
+      <div class="quote-box">
+        <p class="quote">"A raw, unyielding masterpiece. Unapologetic in its intensity and brilliantly crafted."</p>
+        <p class="critic">— INDIE FILM REVIEW</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Your Production Company. All Rights Reserved. Rated +18 for Mature Audiences.</p>
+  </footer>
+
+  <script>
+    function enterSite() {
+      document.getElementById('age-gate').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    function exitSite() {
+      window.location.href = "https://www.google.com";
+    }
+    // Lock scroll until confirmed
+    document.body.style.overflow = 'hidden';
+  </script>
+
+</body></html>
