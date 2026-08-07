@@ -17,6 +17,7 @@
       --amazon-yellow: #FFD814;
       --amazon-yellow-hover: #F7CA00;
       --amazon-amber: #FFA41C;
+      --amazon-red: #CC0C39;
       --amazon-text: #0F1111;
       --amazon-link: #007185;
       --amazon-link-hover: #C7511F;
@@ -109,6 +110,31 @@
       fill: var(--amazon-navy);
     }
 
+    /* PROMO DEAL HEADER BANNER */
+    .deal-banner {
+      background-color: #FEF8F8;
+      border-bottom: 2px solid var(--amazon-red);
+      color: var(--amazon-red);
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .deal-badge {
+      background-color: var(--amazon-red);
+      color: #FFFFFF;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
     /* MAIN CONTAINER */
     .container {
       max-width: 1150px;
@@ -199,7 +225,7 @@
 
     .image-container {
       width: 100%;
-      height: 200px;
+      height: 220px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -207,23 +233,15 @@
       overflow: hidden;
     }
 
-    .image-placeholder {
-      width: 100%;
-      height: 100%;
-      background-color: #FAFAFA;
-      border: 1px dashed var(--border-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #888888;
-      font-size: 13px;
-      text-align: center;
-      padding: 10px;
-      transition: opacity 0.2s;
+    .product-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.2s ease-in-out;
     }
 
-    .product-card a:hover .image-placeholder {
-      opacity: 0.85;
+    .product-card a:hover .product-img {
+      transform: scale(1.03);
     }
 
     .product-title {
@@ -454,6 +472,12 @@
     </div>
   </header>
 
+  <!-- SPECIAL DEAL BANNER -->
+  <div class="deal-banner">
+    <span class="deal-badge">LIMITED DEAL</span>
+    <span>Buy Any 2 Products & Get the 3rd FREE!</span>
+  </div>
+
   <div class="container">
 
     <!-- ABOVE THE FOLD (HERO BANNER) -->
@@ -470,15 +494,13 @@
     <!-- FEATURED PRODUCTS SECTION -->
     <main class="product-grid">
 
-      <!-- PRODUCT 1 -->
+      <!-- PRODUCT 1: KAHI -->
       <article class="product-card">
         <span class="badge-popular">#1 Best Seller</span>
         <div>
           <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">
             <div class="image-container">
-              <div class="image-placeholder">
-                [ Click to View KAHI Balm Product Image ]
-              </div>
+              <img src="https://i.postimg.cc/6p1KJ7jm/post-image-1.jpg" alt="KAHI Wrinkle Bounce Multi Balm Stick" class="product-img">
             </div>
           </a>
           <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer" class="product-title">
@@ -508,14 +530,12 @@
         </div>
       </article>
 
-      <!-- PRODUCT 2 -->
+      <!-- PRODUCT 2: DR. MELAXIN -->
       <article class="product-card">
         <div>
           <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">
             <div class="image-container">
-              <div class="image-placeholder">
-                [ Click to View Dr. Melaxin Balm Product Image ]
-              </div>
+              <img src="https://i.postimg.cc/rmXvM512/POSTE-IMAGE2.jpg" alt="Dr. Melaxin Collagen Multi Balm Stick" class="product-img">
             </div>
           </a>
           <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer" class="product-title">
@@ -545,15 +565,13 @@
         </div>
       </article>
 
-      <!-- PRODUCT 3 -->
+      <!-- PRODUCT 3: MEDICUBE -->
       <article class="product-card">
         <span class="badge-popular" style="background-color: #2E7D32;">Top Rated</span>
         <div>
           <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">
             <div class="image-container">
-              <div class="image-placeholder">
-                [ Click to View Medicube Balm Product Image ]
-              </div>
+              <img src="https://i.postimg.cc/8P0XThGv/POSTEIMAGE4.jpg" alt="Medicube PDRN Pink Collagen Volume Multi Balm Stick" class="product-img">
             </div>
           </a>
           <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer" class="product-title">
