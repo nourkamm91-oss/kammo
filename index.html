@@ -111,29 +111,121 @@
       fill: var(--amazon-navy);
     }
 
-    /* PROMO DEAL HEADER BANNER */
-    .deal-banner {
-      background-color: #FEF8F8;
-      border-bottom: 2px solid var(--amazon-red);
-      color: var(--amazon-red);
+    /* ========================================================
+       HIGH-IMPACT ATTRACTIVE DEAL BANNER 
+       ======================================================== */
+    .deal-banner-container {
+      background: linear-gradient(135deg, #111111 0%, #8A0000 50%, #CC0C39 100%);
+      color: #FFFFFF;
+      padding: 18px 15px;
+      box-shadow: 0 4px 20px rgba(204, 12, 57, 0.35);
+      border-bottom: 3px solid #FFD814;
       text-align: center;
-      padding: 8px 12px;
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 0.3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .deal-badge {
-      background-color: var(--amazon-red);
-      color: #FFFFFF;
-      font-size: 11px;
-      padding: 2px 6px;
-      border-radius: 3px;
+    .deal-banner-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .deal-banner-content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .deal-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .deal-badge-flash {
+      background: #FFD814;
+      color: #111111;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 6px 12px;
+      border-radius: 20px;
       text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 0 10px rgba(255, 216, 20, 0.5);
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #CC0C39;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(204, 12, 57, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(204, 12, 57, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(204, 12, 57, 0); }
+    }
+
+    .deal-main-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 768px) {
+      .deal-main-title {
+        font-size: 24px;
+      }
+    }
+
+    .highlight-gold {
+      color: #FFD814;
+      text-shadow: 0 0 12px rgba(255, 216, 20, 0.4);
+      background: linear-gradient(180deg, #FFF 0%, #FFD814 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .deal-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 6px 16px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 216, 20, 0.3);
+    }
+
+    .timer-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #E0E0E0;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .timer-clock {
+      font-family: monospace, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      color: #FFD814;
+      letter-spacing: 1px;
     }
 
     /* MAIN CONTAINER */
@@ -477,11 +569,24 @@
     </div>
   </header>
 
-  <!-- SPECIAL DEAL BANNER -->
-  <div class="deal-banner">
-    <span class="deal-badge">LIMITED DEAL</span>
-    <span>Buy Any 2 Products & Get the 3rd FREE!</span>
-  </div>
+  <!-- HIGH IMPACT PROMO BANNER -->
+  <section class="deal-banner-container">
+    <div class="deal-banner-content">
+      <div class="deal-left">
+        <div class="deal-badge-flash">
+          <span class="pulse-dot"></span>
+          LIMITED OFFER
+        </div>
+        <div class="deal-main-title">
+          🔥 BUY ANY 2 PRODUCTS & <span class="highlight-gold">GET THE 3RD FREE!</span>
+        </div>
+      </div>
+      <div class="deal-right">
+        <span class="timer-label">Ends In:</span>
+        <span class="timer-clock" id="deal-timer">14:59</span>
+      </div>
+    </div>
+  </section>
 
   <div class="container">
 
@@ -525,7 +630,6 @@
             <span class="price-symbol">$</span><span class="price-whole">24</span><span class="price-fraction">99</span>
             <span class="prime-text">prime</span>
           </div>
-          <!-- CHANGED STOCK STATUS FOR PRODUCT 1 -->
           <div class="stock-status urgent">Just 12 available</div>
           <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer" class="btn-amazon">
             View Details & Buy on Amazon
@@ -597,7 +701,6 @@
             <span class="price-symbol">$</span><span class="price-whole">26</span><span class="price-fraction">00</span>
             <span class="prime-text">prime</span>
           </div>
-          <!-- CHANGED STOCK STATUS FOR PRODUCT 3 -->
           <div class="stock-status urgent">10 PRODUCTS LEFT</div>
           <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer" class="btn-amazon">
             View Details & Buy on Amazon
@@ -641,8 +744,27 @@
     <p style="margin-top: 8px;">&copy; Prime Beauty Deals. As an Amazon Associate, earnings may be generated from qualifying purchases.</p>
   </footer>
 
-  <!-- NOTIFICATION SCRIPT -->
+  <!-- DYNAMIC SCRIPTS -->
   <script>
+    /* COUNTDOWN TIMER LOGIC */
+    let duration = 15 * 60; // 15 minutes
+    const timerDisplay = document.getElementById('deal-timer');
+
+    setInterval(() => {
+      let minutes = Math.floor(duration / 60);
+      let seconds = duration % 60;
+
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      timerDisplay.textContent = `${minutes}:${seconds}`;
+
+      if (--duration < 0) {
+        duration = 15 * 60; // Reset loop
+      }
+    }, 1000);
+
+    /* NOTIFICATION TOAST LOGIC */
     const notifications = [
       {
         icon: "✓",
@@ -675,27 +797,22 @@
 
       const notif = notifications[currentIndex];
       
-      // Update contents
       notifIcon.textContent = notif.icon;
       notifIcon.className = "notification-icon " + (notif.iconClass || "");
       notifText.innerHTML = notif.text;
       notifTime.textContent = notif.time;
 
-      // Slide In
       toast.classList.add("show");
 
-      // Slide Out after 4 seconds
       setTimeout(() => {
         toast.classList.remove("show");
         currentIndex++;
-        // Trigger next notification 3 seconds after current one hides
         if (currentIndex < notifications.length) {
           setTimeout(showNextNotification, 3000);
         }
       }, 4000);
     }
 
-    // Start initial delay of 2.5 seconds after page load
     window.addEventListener("DOMContentLoaded", () => {
       setTimeout(showNextNotification, 2500);
     });
