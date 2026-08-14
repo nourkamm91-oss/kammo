@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Win Top-Trending Korean Skincare: Collagen & PDRN Balm Sticks Giveaway</title>
   <style>
-    /* CSS RESET & VARIABLES (AMAZON BLACK THEME) */
+    /* CSS RESET & VARIABLES (AMAZON BLACK THEME WITH CUSTOM BACKGROUND) */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
     :root {
-      --bg-dark: #000000;              /* Pitch Black Background */
       --card-bg-dark: #121212;         /* Dark Card Container */
       --box-bg-dark: #1E1E1E;          /* Elevated Surface / Box */
       --amazon-navy: #131921;          /* Amazon Header Slate */
@@ -33,7 +32,10 @@
     body {
       font-family: var(--font-family);
       color: var(--amazon-text-light);
-      background-color: var(--bg-dark);
+      /* Custom Background Image with Dark Overlay */
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                  url('https://i.postimg.cc/XNtK3XJH/POSTEIMAGE3.webp') no-repeat center center fixed;
+      background-size: cover;
       line-height: 1.4;
       -webkit-font-smoothing: antialiased;
     }
@@ -82,7 +84,7 @@
 
     /* HIGH-IMPACT PROMO BANNER WITH COUNTDOWN TIMER */
     .deal-banner-container {
-      background: linear-gradient(135deg, #0A0A0A 0%, #40000A 50%, #800018 100%);
+      background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(64, 0, 10, 0.9) 50%, rgba(128, 0, 24, 0.9) 100%);
       color: #FFFFFF;
       padding: 18px 15px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
@@ -201,13 +203,14 @@
 
     /* CPA HERO SECTION */
     .hero-cpa {
-      background-color: var(--card-bg-dark);
+      background-color: rgba(18, 18, 18, 0.92);
       border: 2px dashed var(--amazon-amber);
       border-radius: 8px;
       padding: 24px;
       margin-bottom: 20px;
       text-align: center;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
     }
 
     .hero-cpa h1 {
@@ -330,9 +333,9 @@
       }
     }
 
-    /* PRODUCT CARD WITH IMAGES (BLACK THEME) */
+    /* PRODUCT CARD WITH IMAGES */
     .product-card {
-      background-color: var(--card-bg-dark);
+      background-color: rgba(18, 18, 18, 0.92);
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 16px;
@@ -340,6 +343,7 @@
       flex-direction: column;
       justify-content: space-between;
       position: relative;
+      backdrop-filter: blur(5px);
     }
 
     .badge-popular {
@@ -364,7 +368,7 @@
       justify-content: center;
       margin-bottom: 12px;
       overflow: hidden;
-      background-color: #FFFFFF; /* Kept white background internally for clear image visibility */
+      background-color: #FFFFFF;
       border-radius: 6px;
       padding: 8px;
     }
@@ -468,11 +472,12 @@
 
     /* HOOK / INFO SECTION */
     .info-section {
-      background-color: var(--card-bg-dark);
+      background-color: rgba(18, 18, 18, 0.92);
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 24px;
       margin-bottom: 24px;
+      backdrop-filter: blur(5px);
     }
 
     .info-section h2 {
@@ -523,7 +528,7 @@
       margin: 0 8px;
     }
 
-    /* LIVE POPUP NOTIFICATION TOAST (DARK MODE) */
+    /* LIVE POPUP NOTIFICATION TOAST */
     .notification-toast {
       position: fixed;
       bottom: 20px;
