@@ -5,33 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Win Top-Trending Korean Skincare: Collagen & PDRN Balm Sticks Giveaway</title>
   <style>
-    /* CSS RESET & VARIABLES */
+    /* CSS RESET & VARIABLES (AMAZON BLACK THEME) */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
     :root {
-      --amazon-navy: #131921;
-      --amazon-light-navy: #232f3e;
-      --amazon-yellow: #FFD814;
-      --amazon-yellow-hover: #F7CA00;
-      --amazon-amber: #FFA41C;
-      --amazon-red: #CC0C39;
-      --amazon-text: #0F1111;
-      --amazon-link: #007185;
-      --amazon-link-hover: #C7511F;
-      --amazon-star: #DE7921;
-      --amazon-green: #007600;
-      --bg-gray: #F3F3F3;
-      --border-color: #D5D9D9;
+      --bg-dark: #000000;              /* Pitch Black Background */
+      --card-bg-dark: #121212;         /* Dark Card Container */
+      --box-bg-dark: #1E1E1E;          /* Elevated Surface / Box */
+      --amazon-navy: #131921;          /* Amazon Header Slate */
+      --amazon-yellow: #FFD814;        /* Amazon Primary Button Gold */
+      --amazon-yellow-hover: #F7CA00;  
+      --amazon-amber: #FFA41C;         /* Amazon Accent Orange */
+      --amazon-orange-btn: #FF9900;    /* Amazon CTA Button Orange */
+      --amazon-red: #CC0C39;           /* Amazon Limited Time Red */
+      --amazon-text-light: #F3F3F3;    /* Bright Readable Text */
+      --amazon-text-muted: #AAAAAA;    /* Muted Text */
+      --amazon-link: #4299E1;          /* High-Visibility Blue Link */
+      --amazon-star: #FFA41C;          /* Amazon Rating Star Gold */
+      --amazon-green: #00D166;         /* Stock & Verified Green */
+      --border-color: #2D2D2D;         /* Dark Theme Borders */
       --font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
       font-family: var(--font-family);
-      color: var(--amazon-text);
-      background-color: var(--bg-gray);
+      color: var(--amazon-text-light);
+      background-color: var(--bg-dark);
       line-height: 1.4;
       -webkit-font-smoothing: antialiased;
     }
@@ -42,7 +44,7 @@
     }
 
     a:hover {
-      color: var(--amazon-link-hover);
+      color: var(--amazon-amber);
       text-decoration: underline;
     }
 
@@ -60,10 +62,11 @@
     /* NAVIGATION HEADER */
     .nav-header {
       background-color: var(--amazon-navy);
-      padding: 10px 15px;
+      padding: 12px 15px;
       display: flex;
       align-items: center;
       justify-content: center;
+      border-bottom: 1px solid var(--border-color);
     }
 
     .brand-logo {
@@ -77,13 +80,13 @@
       color: var(--amazon-amber);
     }
 
-    /* HIGH-IMPACT ATTRACTIVE DEAL BANNER WITH TIMER */
+    /* HIGH-IMPACT PROMO BANNER WITH COUNTDOWN TIMER */
     .deal-banner-container {
-      background: linear-gradient(135deg, #111111 0%, #8A0000 50%, #CC0C39 100%);
+      background: linear-gradient(135deg, #0A0A0A 0%, #40000A 50%, #800018 100%);
       color: #FFFFFF;
       padding: 18px 15px;
-      box-shadow: 0 4px 20px rgba(204, 12, 57, 0.35);
-      border-bottom: 3px solid #FFD814;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      border-bottom: 3px solid var(--amazon-yellow);
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -115,7 +118,7 @@
     }
 
     .deal-badge-flash {
-      background: #FFD814;
+      background: var(--amazon-yellow);
       color: #111111;
       font-size: 12px;
       font-weight: 900;
@@ -126,13 +129,13 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      box-shadow: 0 0 10px rgba(255, 216, 20, 0.5);
+      box-shadow: 0 0 10px rgba(255, 216, 20, 0.4);
     }
 
     .pulse-dot {
       width: 8px;
       height: 8px;
-      background-color: #CC0C39;
+      background-color: var(--amazon-red);
       border-radius: 50%;
       display: inline-block;
       animation: pulse 1.2s infinite;
@@ -159,15 +162,15 @@
     }
 
     .highlight-gold {
-      color: #FFD814;
-      text-shadow: 0 0 12px rgba(255, 216, 20, 0.4);
+      color: var(--amazon-yellow);
+      text-shadow: 0 0 12px rgba(255, 216, 20, 0.3);
     }
 
     .deal-right {
       display: flex;
       align-items: center;
       gap: 10px;
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(0, 0, 0, 0.6);
       padding: 6px 16px;
       border-radius: 30px;
       border: 1px solid rgba(255, 216, 20, 0.3);
@@ -176,7 +179,7 @@
     .timer-label {
       font-size: 11px;
       text-transform: uppercase;
-      color: #E0E0E0;
+      color: var(--amazon-text-muted);
       letter-spacing: 0.5px;
       font-weight: 600;
     }
@@ -185,7 +188,7 @@
       font-family: monospace, sans-serif;
       font-size: 18px;
       font-weight: bold;
-      color: #FFD814;
+      color: var(--amazon-yellow);
       letter-spacing: 1px;
     }
 
@@ -198,19 +201,20 @@
 
     /* CPA HERO SECTION */
     .hero-cpa {
-      background-color: #FFFDF5;
+      background-color: var(--card-bg-dark);
       border: 2px dashed var(--amazon-amber);
       border-radius: 8px;
       padding: 24px;
       margin-bottom: 20px;
       text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
     .hero-cpa h1 {
       font-size: 24px;
       font-weight: 700;
       margin-bottom: 10px;
-      color: var(--amazon-text);
+      color: var(--amazon-text-light);
     }
 
     /* CPA INSTRUCTION / STEPS BOX */
@@ -221,7 +225,7 @@
       max-width: 650px;
       margin: 15px auto;
       text-align: left;
-      background: #FFFFFF;
+      background: var(--box-bg-dark);
       padding: 16px;
       border-radius: 8px;
       border: 1px solid var(--border-color);
@@ -242,8 +246,8 @@
     }
 
     .step-num {
-      background: var(--amazon-navy);
-      color: #FFFFFF;
+      background: var(--amazon-amber);
+      color: #000000;
       font-weight: bold;
       width: 28px;
       height: 28px;
@@ -257,7 +261,7 @@
 
     .cpa-step p {
       font-size: 12px;
-      color: var(--amazon-text);
+      color: var(--amazon-text-light);
       margin: 0;
       line-height: 1.3;
     }
@@ -274,7 +278,7 @@
       width: 100%;
       max-width: 500px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(230, 122, 0, 0.4);
+      box-shadow: 0 4px 15px rgba(230, 122, 0, 0.5);
       border: 2px solid #B35900;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -285,7 +289,7 @@
     .btn-cpa-main:hover {
       background: #CC6B00;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(230, 122, 0, 0.6);
+      box-shadow: 0 6px 20px rgba(230, 122, 0, 0.7);
       text-decoration: none;
     }
 
@@ -306,10 +310,10 @@
     }
 
     .trust-badge-item {
-      background-color: #F0F8F0;
+      background-color: rgba(0, 209, 102, 0.1);
       padding: 6px 12px;
       border-radius: 4px;
-      border: 1px solid #BCE1BC;
+      border: 1px solid rgba(0, 209, 102, 0.3);
     }
 
     /* PRODUCT GRID */
@@ -326,9 +330,9 @@
       }
     }
 
-    /* PRODUCT CARD WITH IMAGES */
+    /* PRODUCT CARD WITH IMAGES (BLACK THEME) */
     .product-card {
-      background-color: #FFFFFF;
+      background-color: var(--card-bg-dark);
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 16px;
@@ -342,8 +346,8 @@
       position: absolute;
       top: 12px;
       left: 12px;
-      background-color: #C45500;
-      color: #FFFFFF;
+      background-color: var(--amazon-amber);
+      color: #000000;
       font-size: 11px;
       font-weight: bold;
       padding: 3px 8px;
@@ -360,6 +364,9 @@
       justify-content: center;
       margin-bottom: 12px;
       overflow: hidden;
+      background-color: #FFFFFF; /* Kept white background internally for clear image visibility */
+      border-radius: 6px;
+      padding: 8px;
     }
 
     .product-img {
@@ -379,7 +386,7 @@
       line-height: 1.3;
       margin-bottom: 6px;
       display: block;
-      color: var(--amazon-text);
+      color: var(--amazon-text-light);
     }
 
     .rating-row {
@@ -400,11 +407,11 @@
     }
 
     .highlight-box {
-      background-color: #F7F8F8;
+      background-color: var(--box-bg-dark);
       border-left: 3px solid var(--amazon-amber);
       padding: 8px 10px;
       font-size: 12px;
-      color: #333333;
+      color: var(--amazon-text-muted);
       margin-bottom: 12px;
     }
 
@@ -415,12 +422,12 @@
     .free-price {
       font-size: 20px;
       font-weight: bold;
-      color: var(--amazon-red);
+      color: var(--amazon-amber);
     }
 
     .original-price {
       text-decoration: line-through;
-      color: #767676;
+      color: var(--amazon-text-muted);
       font-size: 14px;
       margin-left: 6px;
     }
@@ -433,7 +440,7 @@
     }
 
     .stock-status.urgent {
-      color: var(--amazon-red);
+      color: #FF4D4D;
     }
 
     /* CARD BUTTONS */
@@ -441,7 +448,7 @@
       background: linear-gradient(180deg, #FFD814 0%, #F7CA00 100%);
       border: 1px solid #FCD200;
       border-radius: 20px;
-      color: var(--amazon-text);
+      color: #111111;
       display: block;
       width: 100%;
       padding: 10px 16px;
@@ -449,19 +456,19 @@
       font-weight: bold;
       text-align: center;
       cursor: pointer;
-      box-shadow: 0 2px 5px rgba(213,217,217,0.5);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
       transition: background 0.1s;
     }
 
     .btn-cpa-card:hover {
       background: var(--amazon-yellow-hover);
       text-decoration: none;
-      color: var(--amazon-text);
+      color: #111111;
     }
 
     /* HOOK / INFO SECTION */
     .info-section {
-      background-color: #FFFFFF;
+      background-color: var(--card-bg-dark);
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 24px;
@@ -473,6 +480,7 @@
       margin-bottom: 12px;
       border-bottom: 1px solid var(--border-color);
       padding-bottom: 8px;
+      color: var(--amazon-text-light);
     }
 
     .info-list {
@@ -484,6 +492,11 @@
       padding-left: 24px;
       margin-bottom: 10px;
       font-size: 14px;
+      color: var(--amazon-text-muted);
+    }
+
+    .info-list li strong {
+      color: var(--amazon-text-light);
     }
 
     .info-list li::before {
@@ -498,10 +511,11 @@
     /* FOOTER */
     .footer {
       background-color: var(--amazon-navy);
-      color: #848688;
+      color: var(--amazon-text-muted);
       text-align: center;
       padding: 20px 15px;
       font-size: 11px;
+      border-top: 1px solid var(--border-color);
     }
 
     .footer a {
@@ -509,15 +523,15 @@
       margin: 0 8px;
     }
 
-    /* LIVE POPUP NOTIFICATION TOAST */
+    /* LIVE POPUP NOTIFICATION TOAST (DARK MODE) */
     .notification-toast {
       position: fixed;
       bottom: 20px;
       left: 20px;
-      background: #FFFFFF;
+      background: var(--card-bg-dark);
       border: 1px solid var(--border-color);
       border-left: 4px solid var(--amazon-amber);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
       border-radius: 6px;
       padding: 12px 16px;
       display: flex;
@@ -539,7 +553,7 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background-color: #F0F8F0;
+      background-color: rgba(0, 209, 102, 0.15);
       color: var(--amazon-green);
       display: flex;
       align-items: center;
@@ -551,13 +565,13 @@
 
     .notification-content p {
       font-size: 13px;
-      color: var(--amazon-text);
+      color: var(--amazon-text-light);
       line-height: 1.3;
     }
 
     .notification-content span {
       font-size: 11px;
-      color: #767676;
+      color: var(--amazon-text-muted);
     }
 
     /* STICKY MOBILE CTA BAR */
@@ -567,9 +581,9 @@
       left: 0;
       right: 0;
       width: 100%;
-      background-color: #FFFFFF;
+      background-color: var(--card-bg-dark);
       border-top: 2px solid var(--amazon-amber);
-      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.8);
       padding: 10px 16px;
       align-items: center;
       justify-content: space-between;
@@ -586,7 +600,7 @@
     .sticky-bar-title {
       font-size: 13px;
       font-weight: 700;
-      color: var(--amazon-text);
+      color: var(--amazon-text-light);
       line-height: 1.2;
     }
 
@@ -605,7 +619,7 @@
       font-weight: 800;
       padding: 10px 14px;
       white-space: nowrap;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
       text-align: center;
       text-transform: uppercase;
     }
@@ -666,7 +680,7 @@
       
       <h1>Win the Viral Korean Skincare Collagen & PDRN Balm Trio!</h1>
       
-      <p style="font-size: 15px; color: #111; font-weight: bold;">
+      <p style="font-size: 15px; color: var(--amazon-text-light); font-weight: bold;">
         If you want to win this deal, you must complete 1 offer below to unlock your entry!
       </p>
 
@@ -691,7 +705,7 @@
         <a href="YOUR_CPA_OFFER_LINK_HERE" target="_blank" rel="noopener noreferrer" class="btn-cpa-main">
           🔥 COMPLETE 1 OFFER TO WIN THIS DEAL NOW &#8250;
         </a>
-        <span style="display: block; font-size: 12px; color: #666; margin-top: 8px;">
+        <span style="display: block; font-size: 12px; color: var(--amazon-text-muted); margin-top: 8px;">
           🔒 100% Free Entry • Fast & Secure Verification
         </span>
       </div>
@@ -773,7 +787,7 @@
 
       <!-- PRODUCT 3: MEDICUBE -->
       <article class="product-card">
-        <span class="badge-popular" style="background-color: #2E7D32;">Top Rated</span>
+        <span class="badge-popular" style="background-color: var(--amazon-green);">Top Rated</span>
         <div>
           <a href="YOUR_CPA_OFFER_LINK_HERE" target="_blank" rel="noopener noreferrer">
             <div class="image-container">
