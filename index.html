@@ -544,6 +544,79 @@
       font-size: 11px;
       color: #767676;
     }
+
+    /* STICKY MOBILE CTA BAR STYLES */
+    .sticky-mobile-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-color: #FFFFFF;
+      border-top: 2px solid var(--amazon-amber);
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      z-index: 999;
+      display: none; /* Hidden on desktop */
+    }
+
+    .sticky-bar-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sticky-bar-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--amazon-text);
+      line-height: 1.2;
+    }
+
+    .sticky-bar-sub {
+      font-size: 11px;
+      color: var(--amazon-green);
+      font-weight: 600;
+    }
+
+    .sticky-bar-btn {
+      background: linear-gradient(180deg, #FFD814 0%, #F7CA00 100%);
+      border: 1px solid #FCD200;
+      border-radius: 20px;
+      color: var(--amazon-text);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 16px;
+      white-space: nowrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .sticky-bar-btn:hover {
+      background: var(--amazon-yellow-hover);
+      text-decoration: none;
+      color: var(--amazon-text);
+    }
+
+    /* DISPLAY ONLY ON MOBILE DEVICES */
+    @media (max-width: 767px) {
+      .sticky-mobile-bar {
+        display: flex;
+      }
+
+      /* Elevate toast notification so it sits right above the sticky bar */
+      .notification-toast {
+        bottom: 75px;
+      }
+
+      /* Add bottom padding to body so footer content isn't obscured */
+      body {
+        padding-bottom: 60px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -729,6 +802,17 @@
       <p id="notif-text"><strong>Angel</strong> just purchased <em>KAHI Wrinkle Bounce Balm Stick</em></p>
       <span id="notif-time">Just now</span>
     </div>
+  </div>
+
+  <!-- STICKY MOBILE CTA BAR -->
+  <div id="sticky-mobile-bar" class="sticky-mobile-bar">
+    <div class="sticky-bar-info">
+      <span class="sticky-bar-title">Trending K-Beauty Balms</span>
+      <span class="sticky-bar-sub">Prime Shipping Available</span>
+    </div>
+    <a href="https://amzn.to/4cF6RKi" target="_blank" rel="noopener noreferrer" class="sticky-bar-btn">
+      Shop on Amazon &#8250;
+    </a>
   </div>
 
   <!-- FOOTER -->
