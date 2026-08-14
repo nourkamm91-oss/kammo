@@ -77,7 +77,7 @@
       color: var(--amazon-amber);
     }
 
-    /* HIGH-IMPACT ATTRACTIVE DEAL BANNER */
+    /* HIGH-IMPACT ATTRACTIVE DEAL BANNER WITH TIMER */
     .deal-banner-container {
       background: linear-gradient(135deg, #111111 0%, #8A0000 50%, #CC0C39 100%);
       color: #FFFFFF;
@@ -145,7 +145,7 @@
     }
 
     .deal-main-title {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 800;
       letter-spacing: 0.5px;
       text-transform: uppercase;
@@ -154,16 +154,13 @@
 
     @media (min-width: 768px) {
       .deal-main-title {
-        font-size: 24px;
+        font-size: 22px;
       }
     }
 
     .highlight-gold {
       color: #FFD814;
       text-shadow: 0 0 12px rgba(255, 216, 20, 0.4);
-      background: linear-gradient(180deg, #FFF 0%, #FFD814 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
     .deal-right {
@@ -186,7 +183,7 @@
 
     .timer-clock {
       font-family: monospace, sans-serif;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: bold;
       color: #FFD814;
       letter-spacing: 1px;
@@ -210,7 +207,7 @@
     }
 
     .hero-cpa h1 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 700;
       margin-bottom: 10px;
       color: var(--amazon-text);
@@ -329,7 +326,7 @@
       }
     }
 
-    /* PRODUCT CARD */
+    /* PRODUCT CARD WITH IMAGES */
     .product-card {
       background-color: #FFFFFF;
       border: 1px solid var(--border-color);
@@ -373,7 +370,7 @@
     }
 
     .product-card a:hover .product-img {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
 
     .product-title {
@@ -412,7 +409,7 @@
     }
 
     .price-row {
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .free-price {
@@ -439,7 +436,7 @@
       color: var(--amazon-red);
     }
 
-    /* BUTTONS */
+    /* CARD BUTTONS */
     .btn-cpa-card {
       background: linear-gradient(180deg, #FFD814 0%, #F7CA00 100%);
       border: 1px solid #FCD200;
@@ -462,7 +459,7 @@
       color: var(--amazon-text);
     }
 
-    /* EDUCATIONAL / HOOK SECTION */
+    /* HOOK / INFO SECTION */
     .info-section {
       background-color: #FFFFFF;
       border: 1px solid var(--border-color);
@@ -512,7 +509,7 @@
       margin: 0 8px;
     }
 
-    /* LIVE NOTIFICATIONS TOAST STYLING */
+    /* LIVE POPUP NOTIFICATION TOAST */
     .notification-toast {
       position: fixed;
       bottom: 20px;
@@ -527,7 +524,7 @@
       align-items: center;
       gap: 12px;
       z-index: 1000;
-      max-width: 320px;
+      max-width: 330px;
       transform: translateY(120%);
       opacity: 0;
       transition: all 0.4s ease-in-out;
@@ -563,7 +560,7 @@
       color: #767676;
     }
 
-    /* STICKY MOBILE CTA BAR STYLES */
+    /* STICKY MOBILE CTA BAR */
     .sticky-mobile-bar {
       position: fixed;
       bottom: 0;
@@ -574,12 +571,11 @@
       border-top: 2px solid var(--amazon-amber);
       box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
       padding: 10px 16px;
-      display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
       z-index: 999;
-      display: none; /* Hidden on desktop */
+      display: none;
     }
 
     .sticky-bar-info {
@@ -614,7 +610,6 @@
       text-transform: uppercase;
     }
 
-    /* DISPLAY ONLY ON MOBILE DEVICES */
     @media (max-width: 767px) {
       .sticky-mobile-bar {
         display: flex;
@@ -642,7 +637,7 @@
     <div class="brand-logo">Prime Beauty<span>Giveaways</span></div>
   </header>
 
-  <!-- HIGH IMPACT PROMO BANNER -->
+  <!-- HIGH IMPACT PROMO BANNER WITH COUNTDOWN TIMER -->
   <section class="deal-banner-container">
     <div class="deal-banner-content">
       <div class="deal-left">
@@ -663,7 +658,7 @@
 
   <div class="container">
 
-    <!-- ABOVE THE FOLD (CPA HERO SECTION) -->
+    <!-- CPA HERO SECTION -->
     <section class="hero-cpa">
       <div style="display: inline-block; background: var(--amazon-red); color: #FFF; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: bold; margin-bottom: 12px; text-transform: uppercase;">
         🎁 Free K-Beauty Balm Bundle Giveaway
@@ -702,13 +697,13 @@
       </div>
 
       <div class="trust-badges">
-        <span class="trust-badge-item">Verified Entry</span>
-        <span class="trust-badge-item">Fast Shipping Included</span>
-        <span class="trust-badge-item">100% Authentic Korean Formulas</span>
+        <span class="trust-badge-item">✓ Verified Entry</span>
+        <span class="trust-badge-item">✓ Fast Shipping Included</span>
+        <span class="trust-badge-item">✓ 100% Authentic Korean Formulas</span>
       </div>
     </section>
 
-    <!-- FEATURED PRODUCTS SECTION -->
+    <!-- FEATURED PRODUCTS SECTION WITH IMAGES -->
     <main class="product-grid">
 
       <!-- PRODUCT 1: KAHI -->
@@ -811,7 +806,7 @@
 
     </main>
 
-    <!-- DIRECT LINK HOOK / WHY TRENDING SECTION -->
+    <!-- INFORMATION SECTION -->
     <section class="info-section">
       <h2>Why Multi-Balms Are Trending</h2>
       <ul class="info-list">
@@ -823,7 +818,7 @@
 
   </div>
 
-  <!-- NOTIFICATION CONTAINER TOAST -->
+  <!-- POPUP NOTIFICATION TOAST -->
   <div id="notification-toast" class="notification-toast">
     <div id="notif-icon" class="notification-icon">✓</div>
     <div class="notification-content">
@@ -853,10 +848,10 @@
     <p style="margin-top: 8px;">&copy; Prime Beauty Giveaways. Complete required sponsor offer to verify entry.</p>
   </footer>
 
-  <!-- DYNAMIC SCRIPTS -->
+  <!-- DYNAMIC JAVASCRIPT FOR TIMER & NOTIFICATIONS -->
   <script>
-    /* COUNTDOWN TIMER LOGIC */
-    let duration = 15 * 60; // 15 minutes
+    /* 1. COUNTDOWN TIMER LOGIC */
+    let duration = 14 * 60 + 59; // Starts at 14:59
     const timerDisplay = document.getElementById('deal-timer');
 
     setInterval(() => {
@@ -866,14 +861,16 @@
       minutes = minutes < 10 ? '0' + minutes : minutes;
       seconds = seconds < 10 ? '0' + seconds : seconds;
 
-      timerDisplay.textContent = `${minutes}:${seconds}`;
+      if (timerDisplay) {
+        timerDisplay.textContent = `${minutes}:${seconds}`;
+      }
 
       if (--duration < 0) {
-        duration = 15 * 60; // Reset loop
+        duration = 15 * 60; // Reset countdown
       }
     }, 1000);
 
-    /* NOTIFICATION TOAST LOGIC */
+    /* 2. POPUP LIVE NOTIFICATIONS LOGIC */
     const notifications = [
       {
         icon: "✓",
@@ -889,6 +886,11 @@
         icon: "✓",
         text: "<strong>Angelina</strong> just claimed <em>Medicube Pink Collagen Balm</em>",
         time: "1 minute ago"
+      },
+      {
+        icon: "✓",
+        text: "<strong>Jessica M.</strong> completed offer for <em>Free K-Beauty Bundle</em>",
+        time: "3 minutes ago"
       }
     ];
 
@@ -899,27 +901,30 @@
     const notifTime = document.getElementById("notif-time");
 
     function showNextNotification() {
-      if (currentIndex >= notifications.length) return;
+      if (currentIndex >= notifications.length) {
+        currentIndex = 0; // Loop notifications
+      }
 
       const notif = notifications[currentIndex];
       
-      notifIcon.textContent = notif.icon;
-      notifText.innerHTML = notif.text;
-      notifTime.textContent = notif.time;
+      if (notifIcon && notifText && notifTime && toast) {
+        notifIcon.textContent = notif.icon;
+        notifText.innerHTML = notif.text;
+        notifTime.textContent = notif.time;
 
-      toast.classList.add("show");
+        toast.classList.add("show");
 
-      setTimeout(() => {
-        toast.classList.remove("show");
-        currentIndex++;
-        if (currentIndex < notifications.length) {
-          setTimeout(showNextNotification, 3000);
-        }
-      }, 4000);
+        setTimeout(() => {
+          toast.classList.remove("show");
+          currentIndex++;
+          setTimeout(showNextNotification, 4000); // Wait between popups
+        }, 4000); // Display time per notification
+      }
     }
 
+    // Trigger notifications after short delay
     window.addEventListener("DOMContentLoaded", () => {
-      setTimeout(showNextNotification, 2500);
+      setTimeout(showNextNotification, 2000);
     });
   </script>
 
