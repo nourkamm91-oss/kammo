@@ -94,25 +94,33 @@
       margin-bottom: 24px;
     }
 
-    /* PRODUCT IMAGE CONTAINER */
+    /* ADJUSTED PRODUCT IMAGE CONTAINER FOR FULL BANNER / POSTER IMAGES */
     .image-box {
       width: 100%;
-      max-width: 280px;
-      height: 280px;
+      max-width: 380px;
+      height: 500px;
       margin: 0 auto 24px;
       background: #FFFFFF;
       border-radius: 12px;
-      padding: 15px;
+      padding: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      overflow: hidden;
     }
 
     .image-box img {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .image-box {
+        height: 400px;
+      }
     }
 
     /* INNER FEATURE LIST BOX */
@@ -360,10 +368,10 @@
       Get the viral #1 Korean Beauty skincare stick. Instantly hydrate fine lines, boost elasticity, and achieve a glowing glass-skin finish anywhere.
     </p>
 
-    <!-- PRODUCT CARD -->
+    <!-- PRODUCT CARD WITH NEW IMAGE -->
     <div class="product-card">
       <div class="image-box">
-        <img src="https://i.postimg.cc/6p1KJ7jm/post-image-1.jpg" alt="KAHI Wrinkle Bounce Multi Balm Stick">
+        <img src="YOUR_IMAGE_URL_HERE" alt="KAHI PDRN Collagen Wrinkle Bounce Multi Balm Stick Promo Banner">
       </div>
 
       <div class="features-list">
