@@ -3,544 +3,442 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Win KAHI Wrinkle Bounce Multi Balm Stick Giveaway</title>
+  <title>Claim Free KAHI Multi Balm Stick</title>
   <style>
-    /* CSS RESET & VARIABLES */
+    /* RESET & BASE STYLES */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    :root {
-      --card-bg-dark: rgba(18, 18, 18, 0.92);
-      --box-bg-dark: #1E1E1E;
-      --amazon-navy: #131921;
-      --amazon-yellow: #FFD814;
-      --amazon-yellow-hover: #F7CA00;
-      --amazon-amber: #FFA41C;
-      --amazon-orange-btn: #FF9900;
-      --amazon-red: #CC0C39;
-      --amazon-text-light: #F3F3F3;
-      --amazon-text-muted: #AAAAAA;
-      --amazon-link: #4299E1;
-      --amazon-star: #FFA41C;
-      --amazon-green: #00D166;
-      --border-color: #2D2D2D;
-      --font-family: Arial, Helvetica, sans-serif;
-    }
 
     body {
-      font-family: var(--font-family);
-      color: var(--amazon-text-light);
-      /* Background Image with Dark Overlay */
-      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
-                  url('https://i.postimg.cc/XNtK3XJH/POSTEIMAGE3.webp') no-repeat center center fixed;
-      background-size: cover;
-      line-height: 1.5;
+      background-color: #0B0E14;
+      color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px 15px;
+      min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      text-decoration: none;
-      color: var(--amazon-link);
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* TOP ANNOUNCEMENT BAR */
-    .top-bar {
-      background-color: var(--amazon-red);
-      color: #FFFFFF;
-      text-align: center;
-      padding: 8px 12px;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-    }
-
-    /* HEADER */
-    .nav-header {
-      background-color: var(--amazon-navy);
-      padding: 14px 15px;
-      text-align: center;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .brand-logo {
-      color: #FFFFFF;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .brand-logo span {
-      color: var(--amazon-amber);
-    }
-
-    /* MAIN STREAMLINED CONTAINER */
-    .container {
-      max-width: 650px;
-      margin: 20px auto;
-      padding: 0 15px 40px;
-    }
-
-    /* MAIN PRODUCT DISPLAY CARD */
-    .product-card {
-      background-color: var(--card-bg-dark);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(8px);
-      text-align: center;
-    }
-
-    .badge-popular {
-      display: inline-block;
-      background-color: var(--amazon-amber);
-      color: #000000;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 4px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    .image-container {
+    .wrapper {
       width: 100%;
-      height: 260px;
+      max-width: 520px;
+      text-align: center;
+    }
+
+    /* BRAND / HEADER */
+    .brand-header {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 18px;
-      background-color: #FFFFFF;
-      border-radius: 8px;
-      padding: 10px;
+      gap: 12px;
+      margin-bottom: 24px;
     }
 
-    .product-img {
+    .brand-logo {
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      color: #FFFFFF;
+    }
+
+    .brand-divider {
+      color: #333945;
+      font-size: 18px;
+    }
+
+    .brand-tag {
+      border: 1px solid #FF8A00;
+      color: #FF8A00;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: rgba(255, 138, 0, 0.05);
+    }
+
+    /* HEADLINE */
+    .main-title {
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .main-title span {
+      color: #FF8A00;
+    }
+
+    .subtitle {
+      color: #9EA0A5;
+      font-size: 14px;
+      line-height: 1.5;
+      max-width: 440px;
+      margin: 0 auto 30px;
+    }
+
+    /* GLOWING MAIN CARD */
+    .product-card {
+      background: linear-gradient(180deg, rgba(40, 32, 20, 0.6) 0%, rgba(20, 22, 28, 0.95) 100%);
+      border: 1px solid rgba(255, 138, 0, 0.25);
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 0 40px rgba(255, 138, 0, 0.08);
+      margin-bottom: 24px;
+    }
+
+    /* PRODUCT IMAGE CONTAINER */
+    .image-box {
+      width: 100%;
+      max-width: 280px;
+      height: 280px;
+      margin: 0 auto 24px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .image-box img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
     }
 
-    .product-title {
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 10px;
-      color: var(--amazon-text-light);
-    }
-
-    .rating-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 14px;
-      font-size: 14px;
-    }
-
-    .stars {
-      color: var(--amazon-star);
-    }
-
-    .rating-count {
-      color: var(--amazon-link);
-    }
-
-    .price-row {
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .free-price {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--amazon-amber);
-    }
-
-    .original-price {
-      text-decoration: line-through;
-      color: var(--amazon-text-muted);
-      font-size: 16px;
-    }
-
-    .stock-status {
-      font-size: 13px;
-      color: var(--amazon-green);
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    /* HIGH CONVERTING PRIMARY CTA BUTTON */
-    .btn-cpa-main {
-      background: linear-gradient(180deg, #FF9900 0%, #E67A00 100%);
-      color: #FFFFFF !important;
-      font-size: 18px;
-      font-weight: 800;
-      padding: 16px 24px;
-      border-radius: 30px;
-      display: block;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(230, 122, 0, 0.5);
-      border: 2px solid #B35900;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.2s ease-in-out;
-      animation: pulse-cpa 1.8s infinite;
-    }
-
-    .btn-cpa-main:hover {
-      background: #CC6B00;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(230, 122, 0, 0.7);
-      text-decoration: none;
-    }
-
-    @keyframes pulse-cpa {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.02); }
-      100% { transform: scale(1); }
-    }
-
-    /* DETAILS SECTION BENEATH PRODUCT */
-    .details-section {
-      margin-top: 25px;
+    /* INNER FEATURE LIST BOX */
+    .features-list {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 16px 20px;
       text-align: left;
-      border-top: 1px solid var(--border-color);
-      padding-top: 20px;
+      margin-bottom: 24px;
     }
 
-    .section-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--amazon-amber);
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* INSTRUCTION STEPS BOX */
-    .cpa-steps-container {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      background: var(--box-bg-dark);
-      padding: 16px;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      margin-bottom: 20px;
-    }
-
-    .cpa-step {
+    .feature-item {
       display: flex;
       align-items: center;
       gap: 12px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .feature-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .check-icon {
+      width: 22px;
+      height: 22px;
+      background: #FF8A00;
+      color: #000000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .feature-item p {
+      color: #E0E0E0;
+    }
+
+    .feature-item strong {
+      color: #FFFFFF;
+    }
+
+    /* STATUS & PRICE ROW */
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 5px;
+    }
+
+    .status-group, .price-group {
+      text-align: left;
+    }
+
+    .price-group {
+      text-align: right;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #7A7E85;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .status-val {
+      color: #00E676;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #00E676;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #00E676;
+    }
+
+    .price-val {
+      font-size: 22px;
+      font-weight: 900;
+      color: #00E676;
+    }
+
+    .price-old {
+      text-decoration: line-through;
+      color: #6C7078;
+      font-size: 14px;
+      margin-right: 6px;
+      font-weight: 500;
+    }
+
+    /* PROGRESS BAR BOX */
+    .progress-box {
+      background: #12161F;
+      border: 1px solid #1E232F;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .progress-left {
+      color: #FF8A00;
+      text-transform: uppercase;
+    }
+
+    .progress-right {
+      color: #8C9099;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background-color: #1C202B;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 82%;
+      height: 100%;
+      background: linear-gradient(90deg, #FF8A00 0%, #FFA800 100%);
+      border-radius: 10px;
+    }
+
+    /* STEPS LIST */
+    .steps-container {
+      text-align: left;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 0 5px;
+    }
+
+    .step-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
     .step-num {
-      background: var(--amazon-amber);
-      color: #000000;
-      font-weight: bold;
       width: 26px;
       height: 26px;
+      background: rgba(255, 138, 0, 0.15);
+      color: #FF8A00;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
+      font-size: 12px;
+      font-weight: 800;
       flex-shrink: 0;
     }
 
-    .cpa-step p {
-      font-size: 13px;
-      color: var(--amazon-text-light);
-      margin: 0;
-    }
-
-    /* PRODUCT HIGHLIGHT LIST */
-    .info-list {
-      list-style-type: none;
-      margin-bottom: 20px;
-    }
-
-    .info-list li {
-      position: relative;
-      padding-left: 24px;
-      margin-bottom: 12px;
+    .step-text {
       font-size: 14px;
-      color: var(--amazon-text-muted);
+      color: #C5C8D0;
+      line-height: 1.4;
     }
 
-    .info-list li strong {
-      color: var(--amazon-text-light);
+    .step-text strong {
+      color: #FFFFFF;
     }
 
-    .info-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--amazon-green);
-      font-weight: bold;
-    }
-
-    /* TRUST BADGES */
-    .trust-badges {
+    /* CTA BUTTON */
+    .btn-cta {
       display: flex;
+      align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 10px;
+      width: 100%;
+      background: linear-gradient(180deg, #FF9500 0%, #E67E00 100%);
+      color: #000000;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 18px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 6px 20px rgba(255, 149, 0, 0.3);
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 149, 0, 0.45);
+    }
+
+    .btn-icon {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* FOOTER DISCLAIMER */
+    .disclaimer {
+      margin-top: 20px;
       font-size: 12px;
-      font-weight: bold;
-      color: var(--amazon-green);
-    }
-
-    .trust-badge-item {
-      background-color: rgba(0, 209, 102, 0.1);
-      padding: 6px 12px;
-      border-radius: 4px;
-      border: 1px solid rgba(0, 209, 102, 0.3);
-    }
-
-    /* FOOTER */
-    .footer {
-      background-color: var(--amazon-navy);
-      color: var(--amazon-text-muted);
-      text-align: center;
-      padding: 20px 15px;
-      font-size: 11px;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .footer a {
-      color: #DDDDDD;
-      margin: 0 8px;
-    }
-
-    /* LIVE POPUP NOTIFICATION TOAST */
-    .notification-toast {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: #121212;
-      border: 1px solid var(--border-color);
-      border-left: 4px solid var(--amazon-amber);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
-      border-radius: 6px;
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 1000;
-      max-width: 320px;
-      transform: translateY(120%);
-      opacity: 0;
-      transition: all 0.4s ease-in-out;
-    }
-
-    .notification-toast.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    .notification-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background-color: rgba(0, 209, 102, 0.15);
-      color: var(--amazon-green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 15px;
-      flex-shrink: 0;
-    }
-
-    .notification-content p {
-      font-size: 12px;
-      color: var(--amazon-text-light);
-      line-height: 1.3;
-    }
-
-    .notification-content span {
-      font-size: 10px;
-      color: var(--amazon-text-muted);
+      color: #585C66;
+      line-height: 1.5;
+      padding: 0 10px;
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <div class="top-bar">
-    ⚡ EXCLUSIVE GIVEAWAY: 100% FREE ENTRY FOR A LIMITED TIME
-  </div>
+  <div class="wrapper">
 
-  <!-- NAVIGATION HEADER -->
-  <header class="nav-header">
-    <div class="brand-logo">Prime Beauty<span>Giveaways</span></div>
-  </header>
+    <!-- BRAND / HEADER -->
+    <header class="brand-header">
+      <div class="brand-logo">amazon</div>
+      <span class="brand-divider">|</span>
+      <span class="brand-tag">SPECIAL GIVEAWAY</span>
+    </header>
 
-  <div class="container">
-
-    <!-- STREAMLINED SINGLE PRODUCT CARD -->
-    <main class="product-card">
-      <span class="badge-popular">#1 Viral K-Beauty Best Seller</span>
-
-      <a href="YOUR_CPA_OFFER_LINK_HERE" target="_blank" rel="noopener noreferrer">
-        <div class="image-container">
-          <img src="https://i.postimg.cc/6p1KJ7jm/post-image-1.jpg" alt="KAHI Wrinkle Bounce Multi Balm Stick" class="product-img">
-        </div>
-      </a>
-
-      <h1 class="product-title">
-        KAHI Wrinkle Bounce Multi Balm Stick – PDRN Collagen Facial & Body Balm
-      </h1>
-
-      <div class="rating-row">
-        <span class="stars">★★★★★</span>
-        <span class="rating-count">4.8 (14,230+ Reviews)</span>
-      </div>
-
-      <div class="price-row">
-        <span class="free-price">FREE</span>
-        <span class="original-price">$24.99</span>
-      </div>
-
-      <div class="stock-status">
-        Just 12 available for giveaway • 10 PRODUCTS LEFT
-      </div>
-
-      <!-- MAIN CTA BUTTON -->
-      <a href="YOUR_CPA_OFFER_LINK_HERE" target="_blank" rel="noopener noreferrer" class="btn-cpa-main">
-        🔥 COMPLETE 1 OFFER TO WIN NOW &#8250;
-      </a>
-
-      <!-- DETAILS & WRITING DIRECTLY BELOW THE PRODUCT -->
-      <section class="details-section">
-        
-        <!-- HOW TO WIN STEPS -->
-        <h2 class="section-title">How To Claim Your Free Balm:</h2>
-        <div class="cpa-steps-container">
-          <div class="cpa-step">
-            <span class="step-num">1</span>
-            <p>Click <strong>"COMPLETE 1 OFFER TO WIN NOW"</strong> above.</p>
-          </div>
-          <div class="cpa-step">
-            <span class="step-num">2</span>
-            <p>Complete <strong>1 quick sponsor offer</strong> to verify your entry.</p>
-          </div>
-          <div class="cpa-step">
-            <span class="step-num">3</span>
-            <p>Your giveaway entry is confirmed and shipped directly to you!</p>
-          </div>
-        </div>
-
-        <!-- PRODUCT BENEFITS -->
-        <h2 class="section-title">Why Everyone Loves KAHI Multi Balm:</h2>
-        <ul class="info-list">
-          <li><strong>Instant Glass-Skin Radiance:</strong> Delivers a natural, non-greasy glow favoured in classic Korean beauty routines.</li>
-          <li><strong>Potent Anti-Aging Ingredients:</strong> Packed with Low-Molecular Collagen, Salmon PDRN, and Adenosine to target fine lines and wrinkles.</li>
-          <li><strong>On-the-Go Convenience:</strong> Portable twist-up stick design allows seamless application over makeup or bare skin anywhere.</li>
-        </ul>
-
-        <!-- TRUST BADGES -->
-        <div class="trust-badges">
-          <span class="trust-badge-item">✓ Verified Giveaway</span>
-          <span class="trust-badge-item">✓ Free Shipping Included</span>
-          <span class="trust-badge-item">✓ 100% Authentic Product</span>
-        </div>
-
-      </section>
-
-    </main>
-
-  </div>
-
-  <!-- POPUP NOTIFICATION TOAST -->
-  <div id="notification-toast" class="notification-toast">
-    <div id="notif-icon" class="notification-icon">✓</div>
-    <div class="notification-content">
-      <p id="notif-text"><strong>Angel</strong> just unlocked the <em>KAHI Balm Deal</em></p>
-      <span id="notif-time">Just now</span>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>
-      <a href="#">Privacy Notice</a> | 
-      <a href="#">Conditions of Use</a> | 
-      <a href="#">Giveaway Rules</a>
+    <!-- MAIN HEADLINE -->
+    <h1 class="main-title">
+      CLAIM YOUR <span>KAHI MULTI BALM</span> TODAY
+    </h1>
+    <p class="subtitle">
+      Get the viral #1 Korean Beauty skincare stick. Instantly hydrate fine lines, boost elasticity, and achieve a glowing glass-skin finish anywhere.
     </p>
-    <p style="margin-top: 8px;">&copy; Prime Beauty Giveaways. Complete required sponsor offer to verify entry.</p>
-  </footer>
 
-  <!-- DYNAMIC JAVASCRIPT FOR NOTIFICATIONS -->
-  <script>
-    const notifications = [
-      {
-        icon: "✓",
-        text: "<strong>Angel</strong> just completed an offer to win <em>KAHI Multi Balm Stick</em>",
-        time: "2 minutes ago"
-      },
-      {
-        icon: "✓",
-        text: "<strong>Caleigh</strong> just verified entry for <em>KAHI Multi Balm Stick</em>",
-        time: "Just now"
-      },
-      {
-        icon: "✓",
-        text: "<strong>Angelina</strong> just claimed <em>KAHI Multi Balm Stick</em>",
-        time: "1 minute ago"
-      },
-      {
-        icon: "✓",
-        text: "<strong>Jessica M.</strong> completed offer for <em>Free KAHI Balm</em>",
-        time: "3 minutes ago"
-      }
-    ];
+    <!-- PRODUCT CARD -->
+    <div class="product-card">
+      <div class="image-box">
+        <img src="https://i.postimg.cc/6p1KJ7jm/post-image-1.jpg" alt="KAHI Wrinkle Bounce Multi Balm Stick">
+      </div>
 
-    let currentIndex = 0;
-    const toast = document.getElementById("notification-toast");
-    const notifIcon = document.getElementById("notif-icon");
-    const notifText = document.getElementById("notif-text");
-    const notifTime = document.getElementById("notif-time");
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="check-icon">✓</div>
+          <p><strong>Full-Size Product:</strong> Official 9g Wrinkle Bounce Stick</p>
+        </div>
+        <div class="feature-item">
+          <div class="check-icon">✓</div>
+          <p><strong>Salmon Collagen Formula:</strong> Target fine lines & neck wrinkles</p>
+        </div>
+        <div class="feature-item">
+          <div class="check-icon">✓</div>
+          <p><strong>Free Shipping Included:</strong> Delivered straight to your door</p>
+        </div>
+      </div>
 
-    function showNextNotification() {
-      if (currentIndex >= notifications.length) {
-        currentIndex = 0;
-      }
+      <div class="status-row">
+        <div class="status-group">
+          <span class="meta-label">ITEM STATUS</span>
+          <div class="status-val">
+            <span class="status-dot"></span> In Stock & Ready
+          </div>
+        </div>
+        <div class="price-group">
+          <span class="meta-label">RETAIL PRICE</span>
+          <div>
+            <span class="price-old">$24.00</span>
+            <span class="price-val">FREE</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      const notif = notifications[currentIndex];
-      
-      if (notifIcon && notifText && notifTime && toast) {
-        notifIcon.textContent = notif.icon;
-        notifText.innerHTML = notif.text;
-        notifTime.textContent = notif.time;
+    <!-- STOCK PROGRESS BAR -->
+    <div class="progress-box">
+      <div class="progress-meta">
+        <span class="progress-left">FREE BALMS LEFT: 18 COPIES</span>
+        <span class="progress-right">82% CLAIMED</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
 
-        toast.classList.add("show");
+    <!-- INSTRUCTIONS / STEPS -->
+    <div class="steps-container">
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-text">Click the button below to start instant verification.</div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-text">Complete <strong>ONE quick & simple offer</strong> to unlock your claim.</div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-text">Your <strong>KAHI Multi Balm</strong> order will process automatically!</div>
+      </div>
+    </div>
 
-        setTimeout(() => {
-          toast.classList.remove("show");
-          currentIndex++;
-          setTimeout(showNextNotification, 4000);
-        }, 4000);
-      }
-    }
+    <!-- CTA BUTTON -->
+    <a href="YOUR_CPA_OFFER_LINK_HERE" target="_blank" rel="noopener noreferrer" class="btn-cta">
+      <svg class="btn-icon" viewBox="0 0 24 24">
+        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+      </svg>
+      COMPLETE 1 OFFER TO CLAIM
+    </a>
 
-    window.addEventListener("DOMContentLoaded", () => {
-      setTimeout(showNextNotification, 2000);
-    });
-  </script>
+    <!-- DISCLAIMER -->
+    <p class="disclaimer">
+      *Verification is required to prevent automated bots & ensure free access for real users.
+    </p>
+
+  </div>
 
 </body>
 </html>
